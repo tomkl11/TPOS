@@ -7,8 +7,17 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/cars")
-public class CarRentalService {
+public class CarRentalService{
     private static ArrayList<Car> cars = new ArrayList<>();
+
+    public static ArrayList<Car> getCars() {
+        return cars;
+    }
+
+    public static void setCars(ArrayList<Car> listCars) {
+        cars = listCars;
+    }
+
     @GetMapping("/")
     public String displayCars() {
         cars.add(new Car("11AA22", "Ferrari", 100));

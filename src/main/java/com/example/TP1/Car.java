@@ -1,8 +1,11 @@
 package com.example.TP1;
 
-import java.util.Date;
+import jakarta.persistence.*;
 
+import java.util.Date;
+@Entity
 public class Car {
+    @Id
     private String plateNumber;
     private String brand;
     private double price;
@@ -39,6 +42,7 @@ public class Car {
         this.brand = brand;
         this.price = price;
     }
+    @Id
     public String getPlateNumber() {
         return plateNumber;
     }
